@@ -87,7 +87,7 @@ $(document).ready(function(){
       if (pigLatin(input) != false){
         $(".bubble").hide().text(translateSentence(input)).slideDown();
       }else{
-      //  $(".bubble").text("Please do not enter numbers or weird punctuation.").slideDown()
+        $(".bubble").text("Please do not enter numbers or weird punctuation.").slideDown()
       }
 
       event.preventDefault();
