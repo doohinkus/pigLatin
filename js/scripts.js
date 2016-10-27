@@ -83,10 +83,11 @@ $(document).ready(function(){
     $("form").submit(function (event){
       var input = $("#input").val();
       console.log(pigLatin(input));
+      $(".bubble").hide();
       if (pigLatin(input) != false){
-        $(".output").text(translateSentence(input));
+        $(".bubble").hide().text(translateSentence(input)).slideDown();
       }else{
-        $(".output").text("Please do not enter numbers or weird punctuation.")
+        $(".bubble").text("Please do not enter numbers or weird punctuation.")
       }
 
       event.preventDefault();
